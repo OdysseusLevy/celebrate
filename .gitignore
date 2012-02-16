@@ -1,6 +1,4 @@
-# web application files that are overwritten by "grails upgrade"
-#  cf. GRAILS_HOME/scripts/Upgrade.groovy, target( upgrade )
-/web-app/WEB-INF
+target
 
 # IDE support files that are overwritten by "grails upgrade"
 #  cf. GRAILS_HOME/scripts/CreateApp.groovy, target( createIDESupportFiles )
