@@ -1,4 +1,5 @@
 target
+.idea
 
 # IDE support files that are overwritten by "grails upgrade"
 #  cf. GRAILS_HOME/scripts/CreateApp.groovy, target( createIDESupportFiles )
