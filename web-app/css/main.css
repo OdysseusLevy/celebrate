@@ -43,7 +43,7 @@ body {
 	        box-shadow: 0 0 0.3em #255b17;
 }
 
-#grailsLogo {
+#siteLogo {
 	background-color: #abbf78;
 }
 
@@ -85,7 +85,7 @@ img {
 
 /* GENERAL */
 
-#grailsLogo a {
+#siteLogo a {
 	display: inline-block;
 	margin: 1em;
 }

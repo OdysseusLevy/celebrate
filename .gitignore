@@ -1,6 +1,7 @@
 target
-.idea
 
+.idea
+out
 # IDE support files that are overwritten by "grails upgrade"
 #  cf. GRAILS_HOME/scripts/CreateApp.groovy, target( createIDESupportFiles )
 # to be specific, you could replace "/*" below with your project name,
