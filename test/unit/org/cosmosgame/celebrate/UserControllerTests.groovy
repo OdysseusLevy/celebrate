@@ -1,9 +1,8 @@
 package org.cosmosgame.celebrate
 
-
-
 import org.junit.*
 import grails.test.mixin.*
+import grails.plugins.springsecurity.SpringSecurityService
 
 @TestFor(UserController)
 @Mock(User)
@@ -12,8 +11,10 @@ class UserControllerTests {
 
     def populateValidParams(params) {
       assert params != null
-      // TODO: Populate valid properties like...
-      //params["name"] = 'someValidName'
+
+      params["username"] = "test"
+      params["password"] = "pwd"
+
     }
 
     void testIndex() {
@@ -30,12 +31,21 @@ class UserControllerTests {
     }
 
     void testCreate() {
+
+       populateValidParams(params)
        def model = controller.create()
 
        assert model.userInstance != null
     }
 
     void testSave() {
+
+      defineBeans {
+        springSecurityService(SpringSecurityService)
+      }
+       mockDo
+       log.info("testSave")
+        populateValidParams(params)
         controller.save()
 
         assert model.userInstance != null
@@ -43,7 +53,6 @@ class UserControllerTests {
 
         response.reset()
 
-        populateValidParams(params)
         controller.save()
 
         assert response.redirectedUrl == '/user/show/1'
@@ -105,7 +114,7 @@ class UserControllerTests {
 
         // test invalid parameters in update
         params.id = user.id
-        //TODO: add invalid values to params object
+        params.username = null
 
         controller.update()
 

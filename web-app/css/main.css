@@ -43,6 +43,11 @@ body {
 	        box-shadow: 0 0 0.3em #255b17;
 }
 
+.title {
+    font-size: 3em;
+    text-align: center;
+}
+
 #siteLogo {
 	background-color: #abbf78;
 }

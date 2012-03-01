@@ -23,10 +23,12 @@
 			<table>
 				<thead>
 					<tr>
+
+                      <g:sortableColumn property="name" title="${message(code: 'person.name.label', default: 'Name')}" />
+
+					  <g:sortableColumn property="dob" title="${message(code: 'person.dob.label', default: 'Dob')}" />
 					
-						<g:sortableColumn property="dob" title="${message(code: 'person.dob.label', default: 'Dob')}" />
-					
-						<g:sortableColumn property="name" title="${message(code: 'person.name.label', default: 'Name')}" />
+
 					
 					</tr>
 				</thead>

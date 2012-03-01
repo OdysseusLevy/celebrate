@@ -1,7 +1,9 @@
 package org.cosmosgame.celebrate
 
 import org.springframework.dao.DataIntegrityViolationException
+import grails.plugins.springsecurity.Secured
 
+@Secured(['ROLE_CREATOR', 'ROLE_ADMIN'])
 class PersonController {
 
     static allowedMethods = [save: "POST", update: "POST", delete: "POST"]

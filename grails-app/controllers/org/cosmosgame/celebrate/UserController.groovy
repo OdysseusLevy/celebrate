@@ -1,7 +1,9 @@
 package org.cosmosgame.celebrate
 
 import org.springframework.dao.DataIntegrityViolationException
+import grails.plugins.springsecurity.Secured
 
+@Secured(['ROLE_ADMIN'])
 class UserController {
 
     static allowedMethods = [save: "POST", update: "POST", delete: "POST"]
@@ -20,6 +22,7 @@ class UserController {
     }
 
     def save() {
+        log.info "Save user: " + params
         def userInstance = new User(params)
         if (!userInstance.save(flush: true)) {
             render(view: "create", model: [userInstance: userInstance])
